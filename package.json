@@ -1,0 +1,22 @@
+{
+  "name": "react-express-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "full stack typescript react/express boilerplate",
+  "repository": "https://github.com/BrendonHudnell/react-express-typescript-boilerplate",
+  "author": "Brendon Hudnell",
+  "license": "MIT",
+  "scripts": {
+    "install": "yarn run install:client && yarn run install:server",
+    "install:client": "cd ./client && yarn install",
+    "install:server": "cd ./server && yarn install",
+    "postinstall": "yarn run build",
+
+    "build": "yarn run build:client && yarn run build:server",
+    "build:client": "cd ./client && yarn build",
+    "build:server": "cd ./server && yarn build",
+
+    "start": "yarn run start:server",
+    "start:client": "cd ./client && yarn run start",
+    "start:server": "cd ./server && yarn run start"
+  }
+}
