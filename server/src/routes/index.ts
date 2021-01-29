@@ -1,12 +1,11 @@
-import { Router, Request, Response } from "express";
-import users from "./users";
+import { Router, Request, Response } from 'express';
+import users from './users';
 
-let router = Router();
+const router = Router();
 
 router.use('/users', users);
 
 router.get('/', (req: Request, res: Response): void => {
-	console.log('You have reached the API')
 	res.send('You have reached the API');
 });
 
