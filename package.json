@@ -32,6 +32,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "extract-css-chunks-webpack-plugin": "^4.9.0",
     "html-webpack-plugin": "^5.0.0-beta.6",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
     "ts-loader": "^8.0.14",
     "ts-node-dev": "^1.1.1",
@@ -48,5 +50,13 @@
     "dev:client": "cd ./client && webpack serve --open --config webpack.dev.js",
     "dev:server": "ts-node-dev --respawn --transpile-only server/src/server.ts",
     "lint": "eslint . --ext .js,.ts,.tsx --quiet --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx}": "yarn lint"
   }
 }
