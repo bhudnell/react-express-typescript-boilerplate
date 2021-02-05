@@ -7,8 +7,6 @@ const app = express();
 
 app.use(cors());
 
-console.log(__dirname);
-
 app.use(express.static(path.join(__dirname, '..', '..', 'client', 'build')));
 
 app.use('/api', routes);
