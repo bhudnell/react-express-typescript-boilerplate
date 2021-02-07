@@ -61,7 +61,7 @@ module.exports = {
 				exclude: /node_modules/,
 			},
 			{
-				test: /\.css$/,
+				test: /\.(sa|sc|c)ss$/,
 				use: [
 					{
 						loader: ExtractCssChunksPlugin.loader,
@@ -69,9 +69,9 @@ module.exports = {
 							hmr: true,
 						},
 					},
-					{
-						loader: 'css-loader',
-					},
+					'css-loader',
+					'postcss-loader',
+					'sass-loader',
 				],
 			},
 		],

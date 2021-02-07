@@ -48,17 +48,17 @@ module.exports = {
 				exclude: /node_modules/,
 			},
 			{
-				test: /\.css$/,
+				test: /\.(sa|sc|c)ss$/,
 				use: [
 					{
 						loader: ExtractCssChunksPlugin.loader,
 						options: {
-							hmr: true,
+							hmr: false,
 						},
 					},
-					{
-						loader: 'css-loader',
-					},
+					'css-loader',
+					'postcss-loader',
+					'sass-loader',
 				],
 			},
 		],
