@@ -1,0 +1,5 @@
+This is a temport file to add the components directory into git.
+
+This directory is to house any components that are used or will be used multiple places in the client.
+
+Examples: icons, link button, generic table implementation, state stores, etc

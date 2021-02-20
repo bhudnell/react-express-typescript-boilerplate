@@ -4,7 +4,7 @@ const ExtractCssChunksPlugin = require('extract-css-chunks-webpack-plugin');
 const path = require('path');
 
 const htmlPlugin = new HtmlWebPackPlugin({
-	template: './index.html',
+	template: './src/index.html',
 	filename: './index.html',
 });
 
@@ -17,7 +17,7 @@ const extractCssChunksPlugin = new ExtractCssChunksPlugin({
 
 module.exports = {
 	mode: 'production',
-	entry: './src/index.tsx',
+	entry: './src/main.tsx',
 	output: {
 		path: path.resolve(__dirname, 'build'),
 		filename: '[name].[contenthash].bundle.js',
