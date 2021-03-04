@@ -9,7 +9,10 @@ export interface RequestSchema {
 	params?: JsonSchema;
 }
 
-export function requestValidator(requestSchema: RequestSchema): RequestHandler {
+export function requestValidator(
+	requestSchema: RequestSchema,
+	coerceTypes?: boolean | 'array'
+): RequestHandler {
 	const jsonSchema: any = {
 		type: 'object',
 		required: [],
@@ -31,7 +34,7 @@ export function requestValidator(requestSchema: RequestSchema): RequestHandler {
 		jsonSchema.properties.params = requestSchema.params;
 	}
 
-	const ajv = new AJV();
+	const ajv = new AJV({ coerceTypes });
 	addFormats(ajv);
 	const validate = ajv.compile(jsonSchema);
 
