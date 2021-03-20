@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express';
 
-export function createUsersRouter(): Router {
+export function createUserRouter(): Router {
 	const router = Router();
 
 	router.get('/', getUsers);
