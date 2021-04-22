@@ -63,7 +63,7 @@
     "start": "node server/build/server.js",
     "dev:client": "cd ./client && webpack serve --open --config webpack.dev.js",
     "dev:server": "ts-node-dev --respawn --transpile-only server/src/server.ts",
-    "lint": "eslint . --ext .js,.ts,.tsx --quiet --fix",
+    "lint": "eslint --ext .js,.ts,.tsx --quiet --fix .",
     "test": "yarn test:server",
     "test:server": "jest",
     "cover": "yarn cover:server",
@@ -76,6 +76,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,tsx}": "yarn lint"
+    "*.{js,ts,tsx}": "eslint --quiet --fix"
   }
 }
