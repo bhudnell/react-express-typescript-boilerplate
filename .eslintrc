@@ -30,7 +30,7 @@
 		"no-unused-vars": "off",
 		"@typescript-eslint/no-unused-vars": [
 			"error",
-			{ "vars": "all", "args": "none" }
+			{ "vars": "all", "after-used", "varsIgnorePattern": "_" }
 		],
 		"@typescript-eslint/explicit-function-return-type": [
 			"error",
