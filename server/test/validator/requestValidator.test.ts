@@ -106,12 +106,11 @@ describe('requestValidator', () => {
 			error: [
 				{
 					keyword: 'type',
-					dataPath: '/body/bodyProp',
 					schemaPath: '#/properties/body/properties/bodyProp/type',
 					params: {
 						type: 'number',
 					},
-					message: 'should be number',
+					message: 'must be number',
 				},
 			],
 		};
@@ -136,12 +135,11 @@ describe('requestValidator', () => {
 			error: [
 				{
 					keyword: 'type',
-					dataPath: '/query/queryProp',
 					schemaPath: '#/properties/query/properties/queryProp/type',
 					params: {
 						type: 'boolean',
 					},
-					message: 'should be boolean',
+					message: 'must be boolean',
 				},
 			],
 		};
@@ -164,12 +162,11 @@ describe('requestValidator', () => {
 			error: [
 				{
 					keyword: 'enum',
-					dataPath: '/params/paramsProp',
 					schemaPath: '#/properties/params/properties/paramsProp/enum',
 					params: {
 						allowedValues: ['valid', 'alsoValid'],
 					},
-					message: 'should be equal to one of the allowed values',
+					message: 'must be equal to one of the allowed values',
 				},
 			],
 		};
